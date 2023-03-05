@@ -17,20 +17,33 @@ class HomePage extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.red[600]),
       body: Row(
-        mainAxisAlignment:MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-        const Text("Hello Buddies"),
-        ElevatedButton(
-          onPressed: () {},
-          child: const Text("Click"),
-        ),
-        Container(
-          color: Colors.cyan,
-          padding: const EdgeInsets.all(30),
-          child: const Text("Container"),
-        )
-      ]),
+          Expanded(
+            flex: 3,
+            child: Image.asset('assets/gumba.jpg')),
+          Expanded(
+            flex:1,
+            child: Container(
+                padding: const EdgeInsets.all(30),
+                color: Colors.purpleAccent,
+                child: const Text("1")),
+          ),
+          Expanded(
+            flex:1,
+            child: Container(
+                padding: const EdgeInsets.all(30),
+                color: Colors.amber,
+                child: const Text("2")),
+          ),
+          Expanded(
+            flex:1,
+            child: Container(
+                padding: const EdgeInsets.all(30),
+                color: Colors.pinkAccent,
+                child: const Text("3")),
+          ),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: Colors.red[600],
